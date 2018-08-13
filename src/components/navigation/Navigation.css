@@ -1,0 +1,25 @@
+.navigation {
+	display: grid;
+	justify-content: end;
+	font-size: 25px;
+	padding: 10px;
+	text-decoration: underline;
+}
+
+.navigation2 {
+	display: grid;
+	grid-auto-flow: column;
+	justify-content: end;
+	grid-gap: 30px;
+	padding: 10px;
+	font-size: 25px;
+	text-decoration: underline;
+}
+
+.navigation2 > p {
+	cursor: pointer;
+}
+
+.navigation > p {
+	cursor: pointer;
+}

@@ -1,0 +1,19 @@
+.preImage {
+	display: flex;
+	justify-content: center;
+}
+
+.image {
+	position: absolute;
+	margin-top: 10px;
+}
+
+.image > img {
+	border-radius: 10px;
+}
+
+.bounding-box {
+	position: absolute;
+	box-shadow: 0 0 0 3px #149df2 inset;
+	cursor: pointer;
+}
