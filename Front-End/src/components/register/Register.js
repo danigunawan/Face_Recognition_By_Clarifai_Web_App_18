@@ -12,18 +12,28 @@ class Register extends React.Component {
     }
   }
 
+//Metoda przechwytujaca to, co wpiszemy w pole Email, ustawia stan komponentu
   onEmailChange = (event) => {
     this.setState({email: event.target.value});
   }
 
+//Metoda przechwytujaca to, co wpiszemy w pole Password, ustawia stan komponentu
   onPasswordChange = (event) => {
     this.setState({password: event.target.value});
   }
 
+//Metoda przechwytujaca to, co wpiszemy w pole Name, ustawia stan komponentu
   onNameChange = (event) => {
     this.setState({name: event.target.value});
   }
 
+//Metoda wykonujaca sie po kliknieciu na przycisk Register na ekranie rejestracji uzytkownika
+//Metoda ta laczy sie z serwerem, przekazuje zapisany w stanie email i haslo i imie do back-endu,
+//ktory, po przeprowadzeniu walidacji danych, dodaje nowego uzytkownika do bazy danych
+//Po poprawnym zarejestrowaniu uzytkownika, za pomoca otrzymanego atrybutu loadUser dane zarejestrowanego
+//uzytkownika przekazujemy do kompnentu App oraz za pomoca drugiego otrzymanego atrybutu onRouteChange
+//ustawiamy stan route w komponencie App na 'home', czyli widok zarejestrowanego profilu uzytkownika
+//Po tym - w komponencie App nastepuje renderowanie odpowiedniego widoku
   onSubmitSignIn = () => {
     fetch('http://localhost:3000/register', {
       method: 'post',

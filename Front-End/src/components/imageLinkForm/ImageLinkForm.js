@@ -1,6 +1,9 @@
 import React from 'react';
 import './ImageLinkForm.css';
 
+
+//Komponent, ktory reaguje na wpisana fraze w input (w widoku profilu uzytkownika)
+//oraz klikniecie przycisku Detect
 const ImageLinkForm = ({onInputChange, onButtonSubmit}) => {
   return(
     <div>

@@ -3,6 +3,7 @@ import './Logo.css';
 import Tilt from 'react-tilt';
 import brain from './brain.png';
 
+//Komponent ustawiajacy logo (zdjecie mozgu) na naszej stronie
 const Logo = () => {
   return(
     <div className='logo'>

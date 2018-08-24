@@ -11,14 +11,23 @@ class SignIn extends React.Component {
     }
   }
 
+//Metoda przechwytujaca to, co wpiszemy w pole Email, ustawia stan komponentu
   onEmailChange = (event) => {
     this.setState({signInEmail: event.target.value});
   }
 
+//Metoda przechwytujaca to, co wpiszemy w pole Password, ustawia stan komponentu
   onPasswordChange = (event) => {
     this.setState({signInPassword: event.target.value});
   }
 
+//Metoda wykonujaca sie po kliknieciu na przycisk Sign In na ekranie logowania uzytkownika
+//Metoda ta laczy sie z serwerem, przekazuje zapisany w stanie email i haslo do back-endu,
+//ktory sprawdza, czy wprowadzone dane pasuja do danego uzytkownika, jezeli tak - wczytujemy
+//za pomoca otrzymanego atrybutu loadUser dane zalogowanego uzytkownika do kompnentu App oraz
+//za pomoca drugiego otrzymanego atrybutu onRouteChange - ustawiamy stan route w komponencie
+//App na 'home', czyli widok zalogowanego profilu uzytkownika
+//Po tym - w komponencie App nastepuje renderowanie odpowiedniego widoku
   onSubmitSignIn = () => {
     fetch('http://localhost:3000/signin', {
       method: 'post',
