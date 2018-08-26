@@ -29,7 +29,7 @@ class SignIn extends React.Component {
 //App na 'home', czyli widok zalogowanego profilu uzytkownika
 //Po tym - w komponencie App nastepuje renderowanie odpowiedniego widoku
   onSubmitSignIn = () => {
-    fetch('http://localhost:3000/signin', {
+    fetch('https://blooming-peak-54758.herokuapp.com/signin', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({

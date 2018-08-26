@@ -35,7 +35,7 @@ class Register extends React.Component {
 //ustawiamy stan route w komponencie App na 'home', czyli widok zarejestrowanego profilu uzytkownika
 //Po tym - w komponencie App nastepuje renderowanie odpowiedniego widoku
   onSubmitSignIn = () => {
-    fetch('http://localhost:3000/register', {
+    fetch('https://blooming-peak-54758.herokuapp.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({

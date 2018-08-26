@@ -97,7 +97,7 @@ user - przechowuje informacje o zalogowanym uzytkowniku (jego id, imie, email, l
  //Ustawia imageUrl na to co jest w input po kliknieciu przycisku
  //Laczy sie z serwerem - po to, aby uzyskac autoryzacje API
     this.setState({imageUrl: this.state.input});
-    fetch('http://localhost:3000/imageurl', {
+    fetch('https://blooming-peak-54758.herokuapp.com/imageurl', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -108,7 +108,7 @@ user - przechowuje informacje o zalogowanym uzytkowniku (jego id, imie, email, l
     .then(response => {
 //Przy pomocy id uzytkownika, aktualizuje w bazie danych liczbe klikniec
       if(response) {
-        fetch('http://localhost:3000/image', {
+        fetch('https://blooming-peak-54758.herokuapp.com/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
